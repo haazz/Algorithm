@@ -19,8 +19,9 @@ class Main {
         List<int[]>[] graph = new ArrayList[N + 1];
         int[] distance = new int[N + 1];
 
-        for (int i = 0; i <= N; i++) {
-            distance[i] = Integer.MAX_VALUE; // 무한대로 초기화
+        // graph, dp 초기화
+        for (int i = 0; i < N + 1; i++) {
+            distance[i] = Integer.MAX_VALUE;
             graph[i] = new ArrayList<int[]>();
         }
 
@@ -34,7 +35,13 @@ class Main {
             graph[b].add(new int[] { a, value });
         }
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[0]));
+        // dijkstra algorithm
+        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0] - o2[0];
+            }
+        });
         pq.add(new int[] { 0, 1 });
         distance[1] = 0;
 
