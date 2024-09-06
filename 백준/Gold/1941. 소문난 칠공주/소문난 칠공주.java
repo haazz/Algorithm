@@ -20,6 +20,7 @@ class Main {
     static int result;
 
     public static boolean isMoreFourY(char[][] board, boolean[][] visit) {
+        // 'Y'가 4개 이상인지 체크
         int cnt = 0;
 
         for (int i = 0; i < N; i++) {
@@ -67,7 +68,7 @@ class Main {
     }
 
     public static boolean isConnect(char[][] board, boolean[][] visit) {
-
+        // bfs를 이용한 연결 체크
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (!visit[i][j]) {
@@ -82,18 +83,12 @@ class Main {
     public static void dfs(char[][] board, boolean[][] visit, int start, int depth) {
         if (depth >= 7) {
             if (isMoreFourY(board, visit) && isConnect(board, visit)) {
-                // for (int i = 0; i < N; i++) {
-                // for (int j = 0; j < N; j++) {
-                // System.out.print(visit[i][j] + " ");
-                // }
-                // System.out.println("");
-                // }
-                // System.out.println();
                 result++;
             }
             return;
         }
 
+        // 1. 조합 구하기
         for (int i = start / 5; i < N; i++) {
             int j = 0;
             if (i == start / 5) {
