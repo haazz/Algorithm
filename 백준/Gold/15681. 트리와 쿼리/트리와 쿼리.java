@@ -8,6 +8,7 @@ public class Main {
     static int Q;
     static Set<Integer>[] graph;
     static int[] dp;
+    static boolean[] visit;
 
     public static int dfs(int node, int cnt) {
         if (graph[node].isEmpty()) {
@@ -15,7 +16,12 @@ public class Main {
         }
 
         for (int nextNode : graph[node]) {
+            if (visit[nextNode]) {
+                continue;
+            }
+            visit[nextNode] = true;
             dp[node] += dfs(nextNode, cnt + 1);
+            visit[nextNode] = false;
         }
         return dp[node] += 1;
     }
@@ -68,6 +74,7 @@ public class Main {
         Q = Integer.parseInt(st.nextToken());
 
         graph = new HashSet[N];
+        visit = new boolean[N];
         dp = new int[N];
 
         for (int i = 0; i < N; i++) {
@@ -83,10 +90,10 @@ public class Main {
             graph[node2].add(node1);
         }
 
-        toTree(R - 1);
+        // toTree(R - 1);
         // for (int i = 0; i < N; i++)
         // System.out.println(tree[i]);
-
+        visit[R - 1] = true;
         dp[R - 1] = dfs(R - 1, 1);
 
         for (int i = 0; i < Q; i++) {
