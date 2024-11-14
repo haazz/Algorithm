@@ -32,7 +32,7 @@ class Main {
                 while (start <= end) {
                     int mid = (start + end) / 2;
 
-                    if (mid != i && Math.abs(liquid[i] + liquid[j] + liquid[mid]) < Math
+                    if (Math.abs(liquid[i] + liquid[j] + liquid[mid]) < Math
                             .abs(result[0] + result[1] + result[2])) {
                         result[0] = liquid[i];
                         result[1] = liquid[j];
