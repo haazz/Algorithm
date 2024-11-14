@@ -23,13 +23,13 @@ class Main {
         result[1] = MAX_VALUE;
 
         for (int i = 0; i < N; i++) {
-            int start = 0;
+            int start = i + 1;
             int end = N - 1;
 
             while (start <= end) {
                 int mid = (start + end) / 2;
 
-                if (mid != i && Math.abs(liquid[i] + liquid[mid]) < Math.abs(result[0] + result[1])) {
+                if (Math.abs(liquid[i] + liquid[mid]) < Math.abs(result[0] + result[1])) {
                     result[0] = liquid[i];
                     result[1] = liquid[mid];
                 }
