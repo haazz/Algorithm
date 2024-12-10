@@ -66,9 +66,8 @@ public class Main {
             long c = Long.parseLong(st.nextToken());
 
             if (a == 1) {
-                long diff = c - nums[b];
+                update(1, N, 1, b, c - nums[b]);
                 nums[b] = c;
-                update(1, N, 1, b, diff);
             } else {
                 sb.append(sum(1, N, 1, b, (int) c)).append("\n");
             }
