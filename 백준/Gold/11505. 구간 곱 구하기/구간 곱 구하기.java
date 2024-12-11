@@ -26,20 +26,7 @@ class Main {
         return (prod(start, mid, node * 2, left, right) * prod(mid + 1, end, node * 2 + 1, left, right)) % MAX_VALUE;
     }
 
-    public static void update(int start, int end, int node, int idx, long diff) {
-        if (start > idx || end < idx) {
-            return;
-        }
-        tree[node] = (tree[node] / nums[idx] * diff) % MAX_VALUE;
-        if (start >= end) {
-            return;
-        }
-        int mid = (start + end) / 2;
-        update(start, mid, node * 2, idx, diff);
-        update(mid + 1, end, node * 2 + 1, idx, diff);
-    }
-
-    public static long updateForZero(int start, int end, int node, int idx, long diff) {
+    public static long update(int start, int end, int node, int idx, long diff) {
         if (start > idx || end < idx) {
             return tree[node];
         }
@@ -47,8 +34,8 @@ class Main {
             return tree[node] = diff;
         }
         int mid = (start + end) / 2;
-        return tree[node] = (updateForZero(start, mid, node * 2, idx, diff)
-                * updateForZero(mid + 1, end, node * 2 + 1, idx, diff)) % MAX_VALUE;
+        return tree[node] = (update(start, mid, node * 2, idx, diff)
+                * update(mid + 1, end, node * 2 + 1, idx, diff)) % MAX_VALUE;
     }
 
     public static void main(String[] args) throws Exception {
@@ -74,12 +61,7 @@ class Main {
             long c = Long.parseLong(st.nextToken());
 
             if (a == 1) {
-                // if (nums[b] == 0) {
-                // updateForZero(1, N, 1, b, c);
-                // } else {
-                // update(1, N, 1, b, c);
-                // }
-                updateForZero(1, N, 1, b, c);
+                update(1, N, 1, b, c);
                 nums[b] = c;
             } else {
                 sb.append(prod(1, N, 1, b, (int) c)).append("\n");
