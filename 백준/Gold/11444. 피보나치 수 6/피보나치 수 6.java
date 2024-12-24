@@ -25,6 +25,11 @@ public class Main {
         N = Long.parseLong(br.readLine());
         baseMatrix = new long[][] { { 1, 1 }, { 1, 0 } };
         long[][] matrix = new long[][] { { 1, 0 }, { 0, 1 } };
+
+        if (N == 0) {
+            System.out.println(0);
+            return;
+        }
         N--;
         while (N > 0) {
             if (N % 2 == 1) {
