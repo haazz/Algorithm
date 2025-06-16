@@ -1,4 +1,4 @@
-// n log n 까지는 괜찮다 -> bs * for문
+// nlogn -> bs * for문
 
 class Solution {
     public int solution(int[] stones, int k) {
