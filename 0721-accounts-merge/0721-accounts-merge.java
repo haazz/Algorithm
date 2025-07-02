@@ -66,7 +66,7 @@ class Solution {
         List<List<String>> res = new ArrayList<>();
 
         for (int key : rMap.keySet()) {
-            List<String> toList = new ArrayList<>(rMap.get(key));
+            List<String> toList = rMap.get(key);
             Collections.sort(toList);
             toList.addFirst(accounts.get(key).get(0));
             res.add(toList);
