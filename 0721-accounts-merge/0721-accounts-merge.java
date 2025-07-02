@@ -49,13 +49,16 @@ class Solution {
             }
         }
 
-        Map<Integer, Set<String>> rMap = new HashMap<>();
+        Map<Integer, List<String>> rMap = new HashMap<>();
 
         for (int i = 0; i < accounts.size(); i++) {
             if (rMap.get(find(i)) == null) {
-                rMap.put(find(i), new HashSet<>());
+                rMap.put(find(i), new ArrayList<>());
             }
             for (int j = 1; j < accounts.get(i).size(); j++) {
+                if (rMap.get(find(i)).contains(accounts.get(i).get(j))) {
+                    continue;
+                }
                 rMap.get(find(i)).add(accounts.get(i).get(j));
             }
         }
