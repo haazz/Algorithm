@@ -49,16 +49,13 @@ class Solution {
             }
         }
 
-        Map<Integer, List<String>> rMap = new HashMap<>();
+        Map<Integer, TreeSet<String>> rMap = new HashMap<>();
 
         for (int i = 0; i < accounts.size(); i++) {
             if (rMap.get(find(i)) == null) {
-                rMap.put(find(i), new ArrayList<>());
+                rMap.put(find(i), new TreeSet<>());
             }
             for (int j = 1; j < accounts.get(i).size(); j++) {
-                if (rMap.get(find(i)).contains(accounts.get(i).get(j))) {
-                    continue;
-                }
                 rMap.get(find(i)).add(accounts.get(i).get(j));
             }
         }
@@ -66,9 +63,9 @@ class Solution {
         List<List<String>> res = new ArrayList<>();
 
         for (int key : rMap.keySet()) {
-            List<String> toList = rMap.get(key);
-            Collections.sort(toList);
-            toList.addFirst(accounts.get(key).get(0));
+            List<String> toList = new ArrayList<>(rMap.get(key));
+            // Collections.sort(toList);
+            toList.add(0, accounts.get(key).get(0));
             res.add(toList);
         }
 
