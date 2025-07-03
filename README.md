@@ -6,6 +6,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Array
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## Hash Table
 |  |
@@ -30,5 +31,10 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Sorting
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
+## Two Pointers
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 <!---LeetCode Topics End-->
