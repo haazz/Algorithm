@@ -37,7 +37,7 @@ class Solution {
         for (int i = 0; i < accounts.size(); i++) {
             List<String> acc = accounts.get(i);
             for (int j = 1; j < acc.size(); j++) {
-                if (ne.get(acc.get(j)) == null) {
+                if (!ne.containsKey(acc.get(j))) {
                     ne.put(acc.get(j), i);
                     continue;
                 }
