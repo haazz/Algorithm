@@ -7,7 +7,7 @@
  */
 
 class Solution {
-    Map<String, Map<String, Integer>> ne = new HashMap<>();
+    Map<String, Integer> ne = new HashMap<>();
     int[] uf;
 
     public int find(int x) {
@@ -36,37 +36,31 @@ class Solution {
 
         for (int i = 0; i < accounts.size(); i++) {
             List<String> acc = accounts.get(i);
-            String name = acc.get(0);
             for (int j = 1; j < acc.size(); j++) {
-                if (ne.get(name) == null) {
-                    ne.put(name, new HashMap<>());
-                }
-                if (ne.get(name).get(acc.get(j)) == null) {
-                    ne.get(name).put(acc.get(j), i);
+                if (ne.get(acc.get(j)) == null) {
+                    ne.put(acc.get(j), i);
                     continue;
                 }
-                union(ne.get(name).get(acc.get(j)), i);
+                union(ne.get(acc.get(j)), i);
             }
         }
 
-        Map<Integer, TreeSet<String>> rMap = new HashMap<>();
+        Map<Integer, List<String>> rMap = new HashMap<>();
 
-        for (int i = 0; i < accounts.size(); i++) {
-            if (rMap.get(find(i)) == null) {
-                rMap.put(find(i), new TreeSet<>());
+        for (Map.Entry<String, Integer> n : ne.entrySet()) {
+            int idx = find(n.getValue());
+            if (rMap.get(idx) == null) {
+                rMap.put(idx, new ArrayList<>());
             }
-            for (int j = 1; j < accounts.get(i).size(); j++) {
-                rMap.get(find(i)).add(accounts.get(i).get(j));
-            }
+            rMap.get(idx).add(n.getKey());
         }
 
         List<List<String>> res = new ArrayList<>();
 
         for (int key : rMap.keySet()) {
-            List<String> toList = new ArrayList<>();
-            // Collections.sort(toList);
-            toList.add(accounts.get(key).get(0));
-            toList.addAll(rMap.get(key));
+            List<String> toList = rMap.get(key);
+            Collections.sort(toList);
+            toList.addFirst(accounts.get(key).get(0));
             res.add(toList);
         }
 
