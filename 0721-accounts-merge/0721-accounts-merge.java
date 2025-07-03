@@ -49,7 +49,7 @@ class Solution {
 
         for (Map.Entry<String, Integer> n : ne.entrySet()) {
             int idx = find(n.getValue());
-            if (rMap.get(idx) == null) {
+            if (!rMap.containsKey(idx)) {
                 rMap.put(idx, new ArrayList<>());
             }
             rMap.get(idx).add(n.getKey());
