@@ -63,9 +63,10 @@ class Solution {
         List<List<String>> res = new ArrayList<>();
 
         for (int key : rMap.keySet()) {
-            List<String> toList = new ArrayList<>(rMap.get(key));
+            List<String> toList = new ArrayList<>();
             // Collections.sort(toList);
-            toList.add(0, accounts.get(key).get(0));
+            toList.add(accounts.get(key).get(0));
+            toList.addAll(rMap.get(key));
             res.add(toList);
         }
 
