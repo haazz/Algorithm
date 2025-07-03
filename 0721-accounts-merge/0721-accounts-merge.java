@@ -47,12 +47,12 @@ class Solution {
 
         Map<Integer, List<String>> rMap = new HashMap<>();
 
-        for (Map.Entry<String, Integer> n : ne.entrySet()) {
-            int idx = find(n.getValue());
+        for (String key: ne.keySet()) {
+            int idx = find(ne.get(key));
             if (!rMap.containsKey(idx)) {
                 rMap.put(idx, new ArrayList<>());
             }
-            rMap.get(idx).add(n.getKey());
+            rMap.get(idx).add(key);
         }
 
         List<List<String>> res = new ArrayList<>();
