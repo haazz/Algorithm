@@ -1,69 +1,89 @@
-/*
-계정 겹치는지 확인 이름 같고 이메일 같으면 같음
-그럼 이름 같은 걸로 HashMap<String, HashMap<Integer, List<String>>>
-이메일은 그 밑에 또 HashMap<Integer, List<String>>
-아니면 List<String>을 TreeSet으로 그 다음에 ceiling 해서 log(n)으로 찾을 수 있음 근데 합치는 것도 log(n)이긴 한데
-그리고 uf 하면 될듯
- */
-
 class Solution {
-    Map<String, Integer> ne = new HashMap<>();
-    int[] uf;
-
-    public int find(int x) {
-        if (x == uf[x]) {
-            return x;
+    class UnionFind {
+        int[] parent;
+        int[] weight;
+        
+        public UnionFind(int num) {
+            parent = new int[num];
+            weight = new int[num];
+            
+            for(int i =  0; i < num; i++) {
+                parent[i] = i;
+                weight[i] = 1;
+            }
         }
-        return uf[x] = find(uf[x]);
-    }
-
-    public void union(int x, int y) {
-        x = find(x);
-        y = find(y);
-
-        if (x <= y) {
-            uf[y] = x;
-        } else {
-            uf[x] = y;
+        
+        public void union(int a, int  b) {
+            int rootA = root(a);
+            int rootB = root(b);
+            
+            if (rootA == rootB) {
+                return;
+            }
+            
+            if (weight[rootA] > weight[rootB]) {
+                parent[rootB] = rootA;
+                weight[rootA] += weight[rootB];
+            } else {
+                parent[rootA] = rootB;
+                weight[rootB] += weight[rootA];
+            }
+        }
+        
+        public int root(int a) {
+            if (parent[a] == a) {
+                return a;
+            }
+            
+            parent[a] = root(parent[a]);
+            return parent[a];
         }
     }
 
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        uf = new int[accounts.size()];
-        for (int i = 0; i < accounts.size(); i++) {
-            uf[i] = i;
-        }
+        int size = accounts.size();
 
-        for (int i = 0; i < accounts.size(); i++) {
-            List<String> acc = accounts.get(i);
-            for (int j = 1; j < acc.size(); j++) {
-                if (!ne.containsKey(acc.get(j))) {
-                    ne.put(acc.get(j), i);
-                    continue;
+        UnionFind uf = new UnionFind(size);
+
+        // prepare a hash with unique email address as key and index in accouts as value
+        HashMap<String, Integer> emailToId = new  HashMap<>();
+        for(int i = 0; i < size; i++) {
+            List<String> details = accounts.get(i);
+            for(int j = 1; j < details.size(); j++) {
+                String email = details.get(j);
+                
+				// if we have already seen this email before, merge the account  "i" with previous account
+				// else add it to hash
+                if (emailToId.containsKey(email)) {
+                    uf.union(i, emailToId.get(email));
+                } else  {
+                    emailToId.put(email, i);
                 }
-                union(ne.get(acc.get(j)), i);
             }
         }
-
-        Map<Integer, List<String>> rMap = new HashMap<>();
-
-        for (String key: ne.keySet()) {
-            int idx = find(ne.get(key));
-            if (!rMap.containsKey(idx)) {
-                rMap.put(idx, new ArrayList<>());
+        
+        // prepare a hash with index in accounts as key and list of unique email address for that account as value
+        HashMap<Integer, List<String>> idToEmails = new HashMap<>();
+        for(String key : emailToId.keySet()) {
+            int root = uf.root(emailToId.get(key));
+            
+            if (!idToEmails.containsKey(root)) {
+                idToEmails.put(root, new ArrayList<String>());
             }
-            rMap.get(idx).add(key);
+            
+            idToEmails.get(root).add(key);
         }
-
-        List<List<String>> res = new ArrayList<>();
-
-        for (int key : rMap.keySet()) {
-            List<String> toList = rMap.get(key);
-            Collections.sort(toList);
-            toList.addFirst(accounts.get(key).get(0));
-            res.add(toList);
+        
+        // collect the emails from idToEmails, sort it and add account name at index 0 to get the final list to add to final return List
+        List<List<String>> mergedDetails =  new ArrayList<>();
+        for(Integer id : idToEmails.keySet()) {
+            List<String> emails =  idToEmails.get(id);
+            Collections.sort(emails);
+            emails.add(0, accounts.get(id).get(0));
+            
+            mergedDetails.add(emails);
         }
-
-        return res;
+        
+        return  mergedDetails;
     }
 }
