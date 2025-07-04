@@ -28,26 +28,18 @@ class Solution {
         }
         target /= 2;
 
-        Set<Integer> combs = new HashSet<>();
+        boolean[] combs = new boolean[target * 2 + 1];
+        combs[0] = true;
 
         for (int i = 0; i < nums.length; i++) {
-            Set<Integer> tmp = new HashSet<>();
-            tmp.add(nums[i]);
-            if (nums[i] == target) {
-                return true;
-            }
-            for (int elem : combs) {
-                if (elem + nums[i] > target) {
-                    continue;
+            for (int j = target - nums[i]; j >= 0; j--) {
+                if (combs[j]) {
+                    combs[j + nums[i]] = true;
                 }
-                if (elem + nums[i] == target) {
-                    return true;
-                }
-                tmp.add(elem + nums[i]);
             }
-            combs.addAll(tmp);
+            combs[nums[i]] = true;
         }
 
-        return combs.contains(target);
+        return combs[target];
     }
 }
