@@ -37,9 +37,6 @@ class Solution {
                 if (elem + nums[i] > target) {
                     continue;
                 }
-                if (elem + nums[i] == target) {
-                    return true;
-                }
                 tmp.add(elem + nums[i]);
             }
             combs.addAll(tmp);
