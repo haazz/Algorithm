@@ -33,9 +33,15 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             Set<Integer> tmp = new HashSet<>();
             tmp.add(nums[i]);
+            if (nums[i] == target) {
+                return true;
+            }
             for (int elem : combs) {
                 if (elem + nums[i] > target) {
                     continue;
+                }
+                if (elem + nums[i] == target) {
+                    return true;
                 }
                 tmp.add(elem + nums[i]);
             }
