@@ -10,10 +10,9 @@ class Solution {
         }
 
         for (int end = 1; end <= s.length(); end++) {
-            for (int start = end - 1; start >= Math.max(0, end - maxLen); start--) {
+            for (int start = Math.max(0, end - maxLen); start < end; start++) {
                 if (dp[start] && wordSet.contains(s.substring(start, end))) {
                     dp[start + (end - start)] = true;
-                    break;
                 }
             }
         }
