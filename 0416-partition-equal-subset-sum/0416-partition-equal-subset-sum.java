@@ -34,6 +34,9 @@ class Solution {
             Set<Integer> tmp = new HashSet<>();
             tmp.add(nums[i]);
             for (int elem : combs) {
+                if (elem + nums[i] > target) {
+                    continue;
+                }
                 tmp.add(elem + nums[i]);
             }
             combs.addAll(tmp);
