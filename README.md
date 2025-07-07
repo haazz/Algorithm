@@ -61,4 +61,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
+## Linked List
+|  |
+| ------- |
+| [0021-merge-two-sorted-lists](https://github.com/haazz/Algorithm/tree/master/0021-merge-two-sorted-lists) |
+## Recursion
+|  |
+| ------- |
+| [0021-merge-two-sorted-lists](https://github.com/haazz/Algorithm/tree/master/0021-merge-two-sorted-lists) |
 <!---LeetCode Topics End-->
