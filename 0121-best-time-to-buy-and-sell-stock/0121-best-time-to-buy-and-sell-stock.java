@@ -13,7 +13,6 @@ class Solution {
                 min = prices[i];
                 max = prices[i];
             }
-            min = Math.min(prices[i], min);
             max = Math.max(prices[i], max);
             profit = Math.max(max - min, profit);
         }
