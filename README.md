@@ -20,6 +20,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## String
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## Depth-First Search
@@ -56,4 +57,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
+## Stack
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
