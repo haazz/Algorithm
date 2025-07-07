@@ -6,6 +6,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
@@ -13,6 +14,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## String
