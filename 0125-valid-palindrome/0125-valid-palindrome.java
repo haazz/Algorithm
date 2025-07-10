@@ -5,7 +5,7 @@ deque에다가 문자를 넣자
 
 class Solution {
     public boolean isPalindrome(String s) {
-        Deque<Character> dq = new LinkedList<>();
+        List<Character> dq = new ArrayList<>();
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -18,20 +18,12 @@ class Solution {
             }
         }
 
-        while (!dq.isEmpty()) {
-            char f = dq.pollLast();
-
-            if (!dq.isEmpty() && f != dq.poll()) {
+        for (int i = 0; i < dq.size() / 2; i++) {
+            if (dq.get(i) != dq.get(dq.size() - i - 1)) {
                 return false;
             }
         }
         return true;
     }
 
-    public boolean isAlphaNumeric(char c) {
-        if ((c >= 'a' && c <= 'Z') || (c >= '0' && c <= '9')) {
-            return true;
-        }
-        return false;
-    }
 }
