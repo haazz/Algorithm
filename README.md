@@ -22,6 +22,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
+| [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## Depth-First Search
@@ -45,6 +46,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
+| [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 ## Dynamic Programming
 |  |
 | ------- |
