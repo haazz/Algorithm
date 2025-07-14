@@ -12,6 +12,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
+| [0792-binary-search](https://github.com/haazz/Algorithm/tree/master/0792-binary-search) |
 ## Hash Table
 |  |
 | ------- |
@@ -86,4 +87,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+## Binary Search
+|  |
+| ------- |
+| [0792-binary-search](https://github.com/haazz/Algorithm/tree/master/0792-binary-search) |
 <!---LeetCode Topics End-->
