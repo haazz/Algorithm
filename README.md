@@ -33,6 +33,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Breadth-First Search
@@ -86,10 +87,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Binary Tree
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Binary Search
 |  |
 | ------- |
@@ -98,4 +101,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 <!---LeetCode Topics End-->
