@@ -103,6 +103,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Binary Search
 |  |
 | ------- |
+| [0278-first-bad-version](https://github.com/haazz/Algorithm/tree/master/0278-first-bad-version) |
 | [0792-binary-search](https://github.com/haazz/Algorithm/tree/master/0792-binary-search) |
 ## Matrix
 |  |
@@ -120,4 +121,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/haazz/Algorithm/tree/master/0232-implement-queue-using-stacks) |
+## Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/haazz/Algorithm/tree/master/0278-first-bad-version) |
 <!---LeetCode Topics End-->
