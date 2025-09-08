@@ -6,14 +6,14 @@ class Solution {
         }
         dp[0] = 0;
 
-        for (int i = 0; i < amount + 1; i++) {
+        for (int i = 1; i < amount + 1; i++) {
             for (int j = 0; j < coins.length; j++) {
-                long next = (long)coins[j] + i;
-                // System.out.println(next);
-                if (next > amount) {
+                int prev = i - coins[j];
+
+                if (prev < 0) {
                     continue;
                 }
-                dp[(int)next] = Math.min(dp[i] + 1, dp[(int)next]);
+                dp[i] = Math.min(dp[prev] + 1, dp[i]);
             }
         }
 
