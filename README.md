@@ -26,6 +26,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## String
 |  |
 | ------- |
+| [0008-string-to-integer-atoi](https://github.com/haazz/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
