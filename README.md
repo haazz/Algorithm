@@ -7,6 +7,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
+| [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/haazz/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
@@ -112,6 +113,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Matrix
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Binary Search Tree
 |  |
@@ -129,4 +131,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0278-first-bad-version](https://github.com/haazz/Algorithm/tree/master/0278-first-bad-version) |
+## Simulation
+|  |
+| ------- |
+| [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 <!---LeetCode Topics End-->
