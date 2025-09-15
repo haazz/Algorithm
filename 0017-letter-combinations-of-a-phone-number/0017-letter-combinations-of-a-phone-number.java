@@ -6,21 +6,23 @@ class Solution {
             {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w','x','y','z'}
         };
     
-    public void comb(String digits, int start, String st) {
+    public void comb(String digits, int start, StringBuilder st) {
         if (digits.length() <= start) {
-            answer.add(st);
+            answer.add(st.toString());
             return;
         }
 
         for (char ch : keys[digits.charAt(start) - '2']) {
-            comb(digits, start + 1, st + ch);
+            st.append(ch);
+            comb(digits, start + 1, st);
+            st.deleteCharAt(st.length() - 1);
         }
     }
     public List<String> letterCombinations(String digits) {
         if (digits.length() <= 0) {
             return answer;
         }
-        comb(digits, 0, "");
+        comb(digits, 0, new StringBuilder());
         return answer;
     }
 }
