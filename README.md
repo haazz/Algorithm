@@ -10,6 +10,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0011-container-with-most-water](https://github.com/haazz/Algorithm/tree/master/0011-container-with-most-water) |
 | [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
+| [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/haazz/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
@@ -32,6 +33,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0008-string-to-integer-atoi](https://github.com/haazz/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
+| [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
@@ -39,6 +41,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 | [0110-balanced-binary-tree](https://github.com/haazz/Algorithm/tree/master/0110-balanced-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
@@ -123,6 +126,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
+| [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Binary Search Tree
 |  |
@@ -160,4 +164,5 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 <!---LeetCode Topics End-->
