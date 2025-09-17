@@ -30,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## String
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/haazz/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0008-string-to-integer-atoi](https://github.com/haazz/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
@@ -69,6 +70,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/haazz/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0011-container-with-most-water](https://github.com/haazz/Algorithm/tree/master/0011-container-with-most-water) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
@@ -76,6 +78,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/haazz/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0062-unique-paths](https://github.com/haazz/Algorithm/tree/master/0062-unique-paths) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/haazz/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
