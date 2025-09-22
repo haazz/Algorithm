@@ -21,8 +21,13 @@ class Solution {
     int target = 0;
 
     public TreeNode build(int left, int right) {
+        if (left >= right) {
+            return null;
+        }
+
         TreeNode node = null;
         int i = left;
+        
         for ( ; i < right; i++) {
                 if (inorder[i] == preorder[target]) {
                     node = new TreeNode(preorder[target]);
