@@ -53,6 +53,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+| [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Breadth-First Search
@@ -60,6 +61,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
@@ -185,4 +187,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+## Graph
+|  |
+| ------- |
+| [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
+## Topological Sort
+|  |
+| ------- |
+| [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
 <!---LeetCode Topics End-->
