@@ -9,13 +9,11 @@ class Solution {
         int remainNode = n;
         int[] numEdges = new int[n];
 
+        for (int i = 0; i < n; i++) {
+            tree.put(i, new ArrayList<>());
+        }
+
         for (int i = 0; i < edges.length; i++) {
-            if (!tree.containsKey(edges[i][0])) {
-                tree.put(edges[i][0], new ArrayList<>());
-            }
-            if (!tree.containsKey(edges[i][1])) {
-                tree.put(edges[i][1], new ArrayList<>());
-            }
             tree.get(edges[i][0]).add(edges[i][1]);
             tree.get(edges[i][1]).add(edges[i][0]);
             numEdges[edges[i][0]]++;
