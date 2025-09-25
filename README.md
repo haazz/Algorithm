@@ -16,6 +16,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 | [0792-binary-search](https://github.com/haazz/Algorithm/tree/master/0792-binary-search) |
@@ -30,6 +31,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/haazz/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## String
 |  |
@@ -74,6 +76,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 ## Two Pointers
 |  |
@@ -174,6 +177,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0011-container-with-most-water](https://github.com/haazz/Algorithm/tree/master/0011-container-with-most-water) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 ## Backtracking
 |  |
 | ------- |
@@ -195,4 +199,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
+## Counting
+|  |
+| ------- |
+| [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 <!---LeetCode Topics End-->
