@@ -28,6 +28,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
+| [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/haazz/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
@@ -113,6 +114,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/haazz/Algorithm/tree/master/0021-merge-two-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
+| [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 ## Recursion
 |  |
 | ------- |
@@ -151,6 +153,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Design
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 | [0232-implement-queue-using-stacks](https://github.com/haazz/Algorithm/tree/master/0232-implement-queue-using-stacks) |
 ## Queue
 |  |
@@ -207,4 +210,8 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
