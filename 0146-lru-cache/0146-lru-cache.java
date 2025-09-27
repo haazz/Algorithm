@@ -1,47 +1,67 @@
+// 양방향 링크드 리스트를 통해 해결?
+
 class LRUCache {
-    HashMap<Integer, int[]> data = new HashMap<>();
-    Queue<Integer> lt = new LinkedList<>();
-    int capacity;
+    class Node {
+        int key;
+        int value;
+        Node prev;
+        Node next;
+
+        public Node(int key, int value, Node prev, Node next) {
+            this.key = key;
+            this.value = value;
+            this.prev = prev;
+            this.next = next;
+        }
+    }
+    Node root;
+    Node last;
+    HashMap<Integer, Node> data = new HashMap<>();
+    int cap;
 
     public LRUCache(int capacity) {
-        this.capacity = capacity;
+        this.cap = capacity;
+        root = new Node(-1, -1, null, null);
+        last = new Node(-1, -1, null, null);
+        root.next = last;
+        last.prev = root;
     }
     
     public int get(int key) {
         if (!data.containsKey(key)) {
             return -1;
         }
-        int[] elem = data.get(key);
-        elem[1]++;
-        lt.add(key);
-        return elem[0];
+        Node node = data.get(key);
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        last.prev.next = node;
+        node.prev = last.prev;
+        last.prev = node;
+        node.next = last;
+        return node.value;
     }
     
     public void put(int key, int value) {
         if (data.containsKey(key)) {
-            int[] elem = data.get(key);
-            elem[0] = value;
-            elem[1]++;
-            lt.add(key);
+            Node node = data.get(key);
+            node.value = value;
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            last.prev.next = node;
+            node.prev = last.prev;
+            last.prev = node;
+            node.next = last;
             return;
         }
-        if (data.size() < capacity) {
-            data.put(key, new int[] {value, 1});
-            lt.add(key);
-            return;
+        if (data.size() >= cap) {
+            data.remove(root.next.key);
+            root.next = root.next.next;
+            root.next.prev = root;
         }
-        while (!lt.isEmpty()) {
-            int k = lt.poll();
-            int[] elem = data.get(k);
-            System.out.println(k + " " + elem);
-            if (elem[1] <= 1) {
-                data.remove(k);
-                break;
-            }
-            elem[1]--;
-        }
-        data.put(key, new int[] {value, 1});
-        lt.add(key);
+        Node node = new Node(key, value, last.prev, last);
+        last.prev.next = node;
+        last.prev = node;
+        data.put(key, node);
     }
 }
 
