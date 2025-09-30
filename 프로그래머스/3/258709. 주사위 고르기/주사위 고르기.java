@@ -1,80 +1,80 @@
 import java.util.*;
 
 class Solution {
-    HashMap<Integer, List<Integer>> combs = new HashMap<>();
+    HashMap<Integer, List<Integer>> combs;
     int N;
-        
-    public void comb(int[][] dice, int start, int visit, int depth, int value) {
+    
+    public void comb(int[][] dice, int visit, int start, int depth, int val) {
         if (depth >= N / 2) {
-            if (combs.get(visit) == null) {
+            if (!combs.containsKey(visit)) {
                 combs.put(visit, new ArrayList<>());
             }
-            combs.get(visit).add(value);
+            combs.get(visit).add(val);
             return;
         }
         
         for (int i = start; i < N; i++) {
             for (int j = 0; j < 6; j++) {
-                comb(dice, i + 1, visit | (1 << i), depth + 1, value + dice[i][j]);
+                comb(dice, visit | (1 << i), i + 1, depth + 1, val + dice[i][j]);
             }
         }
     }
     
-    public int bs(int target, int visit) {
-        int s = 0;
+    public int bs(List<Integer> list, int val) {
+        int answer = -1;
+        int l = 0;
+        int r = list.size() - 1;
         
-        // System.out.println(combs.get(visit));
-        int e = combs.get(visit).size() - 1;
-        int res = 0;
-        
-        while (s <= e) {
-            int mid = (s + e) / 2;
+        while (l <= r) {
+            int mid = (l + r) / 2;
             
-            if (target > combs.get(visit).get(mid)) {
-                s = mid + 1;
-                res = mid;
+            if (list.get(mid) < val) {
+                answer = mid;
+                l = mid + 1;
             } else {
-                e = mid - 1;
+                r = mid - 1;
             }
         }
-        // System.out.println(target + " " + res);
-        return res;
-    }
-    
-    public int[] comp() {
-        int resV = 0;
-        int maxWin = 0;
-        
-        for (int visit : combs.keySet()) {
-            Collections.sort(combs.get(visit));
-        }
-        
-        for (int visit : combs.keySet()) {
-            int win = 0;
-            for (int val : combs.get(visit)) {
-                win += bs(val, visit ^ ((1 << N) - 1));
-            }
-            
-            // System.out.println(visit + " " +win + " "  + combs.get(visit));
-            if (win > maxWin) {
-                maxWin = win;
-                resV = visit;
-            }
-        }
-        int[] res = new int[N / 2];
-        int cnt = 0;
-        for (int i = 0; i < N; i++) {
-            if ((resV & (1 << i)) != 0) {
-                res[cnt++] = i + 1;
-            }
-        }
-        return res;
+        return answer;
     }
     
     public int[] solution(int[][] dice) {
-        int[] answer = {};
         N = dice.length;
+        combs = new HashMap<>();
         comb(dice, 0, 0, 0, 0);
-        return comp();
+        int maxComb = 0;
+        int maxWin = 0;
+        
+        for (int key : combs.keySet()) {
+            Collections.sort(combs.get(key));
+        }
+        
+        for (int key : combs.keySet()) {
+            int op = ((1 << N) - 1) ^ key;
+            int win = 0;
+            System.out.println(key + " " + op);
+
+            for (int val : combs.get(key)) {
+                win += bs(combs.get(op), val) + 1;
+            }
+            if (maxWin < win) {
+                maxComb = key;
+                maxWin = win;
+            }
+        }
+        
+        int[] answer = new int[N / 2];
+        int idx = 0;
+        for (int i = 0; i < N; i++) {
+            if (((1 << i) & maxComb) == 0) {
+                continue;
+            }
+            answer[idx] = i + 1;
+            idx++;
+        }
+        
+        return answer;
     }
+    
+    
 }
