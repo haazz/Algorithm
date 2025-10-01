@@ -10,11 +10,9 @@ class Solution {
         for (int i = 1; i < n; i++) {
             int prevAnswer = answer;
             if (tops[i] == 0) {
-                answer = (answer * 3) % MOD;
-                answer = (answer - nonEmpty) % MOD;
+                answer = ((answer * 3) - nonEmpty) % MOD;
             } else {
-                answer = (answer * 4) % MOD;
-                answer = (answer - nonEmpty) % MOD;
+                answer = ((answer * 4) - nonEmpty) % MOD;
             }
             if (answer < 0) answer += MOD;
             nonEmpty = prevAnswer;
