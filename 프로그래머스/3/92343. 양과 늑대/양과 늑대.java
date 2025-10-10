@@ -1,13 +1,12 @@
 import java.util.*;
 
 class Solution {
-    int answer = 0;
+    List<List<Integer>> tree = new ArrayList<>();
     int N;
-    List<Integer>[] graph;
+    int answer = 0;
     
-    
-    public void find(int[] info, List<Integer> list, int node, int sheep, int wolf) {
-        if (info[node] == 0) {
+    public void sol(int[] info, List<Integer> canGo, int sheep, int wolf, int cur) {
+        if (info[cur] == 0) {
             sheep++;
         } else {
             wolf++;
@@ -16,26 +15,25 @@ class Solution {
             return;
         }
         answer = Math.max(sheep, answer);
-        list.remove(new Integer(node));
-        list.addAll(graph[node]);
-        for (int nNode : list) {
-            find(info, new ArrayList<>(list), nNode, sheep, wolf);
+        canGo.remove(Integer.valueOf(cur));
+        for (int next: tree.get(cur)) {
+            canGo.add(next);
+        }
+        for (int next: canGo) {
+            sol(info, new ArrayList<>(canGo), sheep, wolf, next);
         }
     }
     
     public int solution(int[] info, int[][] edges) {
         N = info.length;
-        graph = new ArrayList[N];
         
         for (int i = 0; i < N; i++) {
-            graph[i] = new ArrayList<>();
+            tree.add(new ArrayList<>());
         }
         for (int i = 0; i < edges.length; i++) {
-            graph[edges[i][0]].add(edges[i][1]);
+            tree.get(edges[i][0]).add(edges[i][1]);
         }
-        
-        // 찾기
-        find(info, new ArrayList<>(), 0, 0, 0);
+        sol(info, new ArrayList<>(), 0, 0, 0);
         return answer;
     }
 }
