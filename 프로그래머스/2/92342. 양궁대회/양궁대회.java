@@ -1,53 +1,44 @@
-// 쏜 횟수
-// 점수
+import java.util.*;
 
 class Solution {
-    final int N = 11;
     int[] answer;
-    int maxScore = 0;
+    int remArrow = 0;
+    int maxsub = 0;
     
-    int[] info;
-    public void comb(int[] used, int i, int ps, int rs, int arrow) {
-        if (rs - ps > maxScore) {
-            answer = used.clone();
-            maxScore = rs - ps;
-        }
-        if (i < 0) {
+    public void sol(int arrow, int[] info, int ap, int rp, int idx, int[] used) {
+        if (idx < 0) {
+            if (maxsub < rp - ap) {
+                answer = used.clone();
+                maxsub = rp - ap;
+                remArrow = arrow;
+            }
             return;
         }
-        
-        if (info[i] < arrow) {
-            used[i] = info[i] + 1;
-            if (info[i] != 0) {    
-                comb(used, i - 1, ps - (N - i - 1), rs + (N - i) - 1, arrow - (info[i] + 1));
+        if (info[idx] < arrow) {
+            used[idx] = info[idx] + 1;
+            if (info[idx] != 0) {
+                sol(arrow - info[idx] - 1, info, ap - (10 - idx), rp + (10 - idx), idx - 1, used);
             } else {
-                comb(used, i - 1, ps, rs + (N - i - 1), arrow - (info[i] + 1));
+                sol(arrow - info[idx] - 1, info, ap, rp + (10 - idx), idx - 1, used);
             }
-            used[i] = 0;
+            used[idx] = 0;
         }
-        comb(used, i - 1, ps, rs, arrow);
+        sol(arrow, info, ap, rp, idx - 1, used);
     }
     
     public int[] solution(int n, int[] info) {
-        this.info = info;
-        
-        int ps = 0;
+        int ap = 0;
         for (int i = 0; i < info.length; i++) {
             if (info[i] > 0) {
-                ps += N - i - 1;
+                ap += 10 - i;
             }
         }
-        comb(new int[N], N - 2, ps, 0, n);
+        sol(n, info, ap, 0, 9, new int[11]);
+        
         if (answer == null) {
             return new int[] {-1};
         }
-        int ua = 0;
-        for (int i = 0; i < N; i++) {
-            ua += answer[i];
-        }
-        if (ua < n) {
-            answer[N - 1] = n - ua;
-        }
+        answer[10] = remArrow;
         return answer;
     }
 }
