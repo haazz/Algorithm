@@ -1,59 +1,62 @@
 import java.util.*;
 
 class Solution {
-    HashMap<Integer, List<Integer>> graph;
-    int[] result = new int[4];
-    boolean[] visit;
+    HashMap<Integer, List<Integer>> graph = new HashMap<>();
+    HashMap<Integer, List<Integer>> rev = new HashMap<>();
     
-    public int dfs(int node) {
-        if (graph.get(node) == null) {
+    public int sol(int node, Set<Integer> visit) {
+        if (graph.get(node).isEmpty()) {
             return 2;
         }
         if (graph.get(node).size() >= 2) {
             return 3;
         }
-        for (int nNode : graph.get(node)) {
-            if (visit[nNode]) {
-                return 1;
-            }
-            visit[nNode] = true;
-            return dfs(nNode);
+        if (visit.contains(node)) {
+            return 1;
         }
-        return 2;
+        visit.add(node);
+        for (int nNode: graph.get(node)) {
+            int res = sol(nNode, visit);
+            if (res >= 1) {
+                return res;
+            }
+        }
+        visit.remove(node);
+        return 1;
     }
     
     public int[] solution(int[][] edges) {
-        graph = new HashMap<>();
-        Set<Integer> targetNodes = new HashSet<>();
-        int N = edges.length;
-        
-        // 생성한 정점 구하기
-        for (int i = 0; i < N; i++) {
-            int a = edges[i][0];
-            int b = edges[i][1];
-
-            if (graph.get(a) == null) {
-                graph.put(a, new ArrayList<>());
+        for (int i = 0; i < edges.length; i++) {
+            if (!graph.containsKey(edges[i][0])) {
+                graph.put(edges[i][0], new ArrayList<>());
             }
-            targetNodes.add(b);
-            graph.get(a).add(b);
+            if (!graph.containsKey(edges[i][1])) {
+                graph.put(edges[i][1], new ArrayList<>());
+            }
+            graph.get(edges[i][0]).add(edges[i][1]);
+            
+            if (!rev.containsKey(edges[i][0])) {
+                rev.put(edges[i][0], new ArrayList<>());
+            }
+            if (!rev.containsKey(edges[i][1])) {
+                rev.put(edges[i][1], new ArrayList<>());
+            }
+            rev.get(edges[i][1]).add(edges[i][0]);
         }
         
-        // 새로 생긴 노드 구하기
-        for (int node : graph.keySet()) {
-            if (!targetNodes.contains(node) && graph.get(node).size() >= 2) {
-                result[0] = node;
+        int[] answer = new int[4];
+        for (int key : rev.keySet()) {
+            if (rev.get(key).isEmpty() && graph.get(key).size() >= 2) {
+                answer[0] = key;
                 break;
             }
         }
         
-        // 탐색
-        visit = new boolean[1000001];
-        for (int node: graph.get(result[0])) {
-            int type = dfs(node);
-            result[type]++;
+        for (int node : graph.get(answer[0])) {
+            int idx = sol(node, new HashSet<>());
+            answer[idx]++;
         }
         
-        return result;
+        return answer;
     }
 }
