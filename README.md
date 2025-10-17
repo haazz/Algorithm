@@ -55,6 +55,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0110-balanced-binary-tree](https://github.com/haazz/Algorithm/tree/master/0110-balanced-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
@@ -126,6 +127,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0110-balanced-binary-tree](https://github.com/haazz/Algorithm/tree/master/0110-balanced-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Binary Tree
 |  |
@@ -134,6 +136,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0110-balanced-binary-tree](https://github.com/haazz/Algorithm/tree/master/0110-balanced-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/haazz/Algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Binary Search
 |  |
@@ -149,6 +152,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Binary Search Tree
 |  |
 | ------- |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Design
 |  |
