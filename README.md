@@ -30,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
+| [0383-ransom-note](https://github.com/haazz/Algorithm/tree/master/0383-ransom-note) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/haazz/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
@@ -45,6 +46,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
+| [0383-ransom-note](https://github.com/haazz/Algorithm/tree/master/0383-ransom-note) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/haazz/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
@@ -213,6 +215,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Counting
 |  |
 | ------- |
+| [0383-ransom-note](https://github.com/haazz/Algorithm/tree/master/0383-ransom-note) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 ## Doubly-Linked List
 |  |
