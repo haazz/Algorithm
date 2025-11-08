@@ -1,58 +1,42 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-
-    static class Node {
-        private char ch;
-        private int idx;
-
-        public Node(char ch, int idx) {
-            this.ch = ch;
-            this.idx = idx;
-        }
-    }
-
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        String s = br.readLine();
-        String bomb = br.readLine();
-        Deque<Node> deque = new LinkedList<>();
-        int bombLength = bomb.length();
+        Stack<Character> s = new Stack<>();
 
-        for (int i = 0; i < s.length(); i++) {
+        String s1 = br.readLine();
+        String s2 = br.readLine();
 
-            if (!deque.isEmpty() && deque.peek().idx == bombLength - 1) {
-                while (!deque.isEmpty() && deque.pop().idx != 0)
-                    ;
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) != s2.charAt(s2.length() - 1)) {
+                s.push(s1.charAt(i));
+                continue;
+            }
+            int j = s2.length() - 2;
+            Stack<Character> tmp = new Stack<>();
+            while (j >= 0 && !s.isEmpty() && s.peek() == s2.charAt(j)) {
+                tmp.add(s.pop());
+                j--;
             }
 
-            if (!deque.isEmpty() && bomb.charAt(deque.peek().idx + 1) == s.charAt(i)) {
-                deque.push(new Node(s.charAt(i), deque.peek().idx + 1));
-            } else if (bomb.charAt(0) == s.charAt(i)) {
-                deque.push(new Node(s.charAt(i), 0));
-            } else {
-                deque.push(new Node(s.charAt(i), -1));
+            if (j >= 0) {
+                while (!tmp.isEmpty()) {
+                    s.add(tmp.pop());
+                }
+                s.add(s1.charAt(i));
             }
         }
 
-        if (!deque.isEmpty() && deque.peek().idx == bombLength - 1) {
-            while (!deque.isEmpty() && deque.pop().idx != 0)
-                ;
-        }
-
-        if (deque.isEmpty()) {
+        if (s.isEmpty()) {
             System.out.println("FRULA");
         } else {
-            while (!deque.isEmpty()) {
-                sb.append(deque.pollLast().ch);
+            StringBuilder sb = new StringBuilder();
+            while (!s.isEmpty()) {
+                sb.append(s.pop());
             }
+            System.out.println(sb.reverse().toString());
         }
-        System.out.print(sb);
     }
 }
