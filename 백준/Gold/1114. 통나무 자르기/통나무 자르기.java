@@ -1,64 +1,86 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+
+// pq이용해서 무조건 큰 것부터 bs로 최적의 자르기 실행 k번 하면 끝?
+import java.io.*;
+import java.util.*;
 
 public class Main {
     static int L;
     static int K;
     static int C;
 
-    public static void main(String[] args) throws Exception {
+    public static int bs(int[] pos, int lp, int rp, int l, int r) {
+        int answer = -1;
+        int aVal = Integer.MAX_VALUE;
+
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            int lv = pos[mid] - lp;
+            int rv = rp - pos[mid];
+
+            if (lv < rv) {
+                l = mid + 1;
+                if (aVal >= rv) {
+                    aVal = rv;
+                    answer = mid;
+                }
+            } else {
+                r = mid - 1;
+                if (aVal > lv) {
+                    aVal = lv;
+                    answer = mid;
+                }
+            }
+        }
+        return answer;
+    }
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        
+        long[] answer = new long[2];
+
         L = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
 
-        long[] cuts = new long[K + 2];
+        List<Integer> pos = new ArrayList<>();
         st = new StringTokenizer(br.readLine());
+
         for (int i = 0; i < K; i++) {
-            cuts[i] = Long.parseLong(st.nextToken());
+            pos.add(Integer.parseInt(st.nextToken()));
         }
-        cuts[K] = L;
-        cuts[K + 1] = 0;
+        Collections.sort(pos);
+        pos.add(0, 0);
+        pos.add(L);
 
-        Arrays.sort(cuts);
-        long start = 0;
-        long end = L;
-        long maxLength = 0;
-        long firstCut = 0;
+        int l = 0;
+        int r = L;
 
-        while (start <= end) {
-            long mid = (start + end) / 2;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            int cnt = 0;
+            int lPos = L;
 
-            long lastCut = L;
-            long cnt = 0;
             for (int i = K; i >= 0; i--) {
-                if (lastCut - cuts[i] > mid) {
-                    if (cuts[i + 1] - cuts[i] > mid) {
-                        cnt = C + 1; 
+                if (lPos - pos.get(i) > mid) {
+                    if (pos.get(i + 1) - pos.get(i) > mid) {
+                        cnt = C + 1;
                         break;
                     }
-                    lastCut = cuts[i + 1];
                     cnt++;
+                    lPos = pos.get(i + 1);
                 }
             }
 
-            if (cnt < C) {
-                lastCut = cuts[1];
-            }
-
             if (cnt > C) {
-                start = mid + 1;
+                l = mid + 1;
             } else {
-                maxLength = mid;
-                firstCut = lastCut;                   
-                end = mid - 1;
+                r = mid - 1;
+                answer[0] = mid;
+                answer[1] = cnt < C ? pos.get(1) : lPos;
             }
-        } 
+        }
 
-        System.out.println(maxLength + " " + firstCut);
+        System.out.println(answer[0] + " " + answer[1]);
     }
 }
