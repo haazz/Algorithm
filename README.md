@@ -95,6 +95,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/haazz/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0062-unique-paths](https://github.com/haazz/Algorithm/tree/master/0062-unique-paths) |
+| [0070-climbing-stairs](https://github.com/haazz/Algorithm/tree/master/0070-climbing-stairs) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/haazz/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
@@ -106,6 +107,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Memoization
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/haazz/Algorithm/tree/master/0070-climbing-stairs) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 ## Stack
 |  |
@@ -177,6 +179,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/haazz/Algorithm/tree/master/0062-unique-paths) |
+| [0070-climbing-stairs](https://github.com/haazz/Algorithm/tree/master/0070-climbing-stairs) |
 ## Combinatorics
 |  |
 | ------- |
