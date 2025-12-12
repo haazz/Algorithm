@@ -1,19 +1,27 @@
 class Solution {
     public int longestPalindrome(String s) {
-        int answer = 0;
-        Set<Character> st = new HashSet<>();
+        int[] alp = new int[52];
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (st.contains(ch)) {
-                st.remove(ch);
-                answer += 2;
+            if (ch >= 'a' && ch <= 'z') {
+                alp[ch - 'a']++;
             } else {
-                st.add(ch);
+                alp[ch - 'A' + 26]++;
+            }
+            
+        }
+
+        boolean single = false;
+        int answer = 0;
+        for (int i = 0; i < 52; i++) {
+            answer += (alp[i] / 2) * 2;
+            if (alp[i] % 2 == 1) {
+                single = true;
             }
         }
 
-        if (!st.isEmpty()) {
+        if (single) {
             answer++;
         }
         return answer;
