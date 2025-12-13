@@ -120,10 +120,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0021-merge-two-sorted-lists](https://github.com/haazz/Algorithm/tree/master/0021-merge-two-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
+| [0206-reverse-linked-list](https://github.com/haazz/Algorithm/tree/master/0206-reverse-linked-list) |
 ## Recursion
 |  |
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/haazz/Algorithm/tree/master/0021-merge-two-sorted-lists) |
+| [0206-reverse-linked-list](https://github.com/haazz/Algorithm/tree/master/0206-reverse-linked-list) |
 ## Tree
 |  |
 | ------- |
