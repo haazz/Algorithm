@@ -9,16 +9,15 @@
  * }
  */
 class Solution {
-    Queue<Integer> q = new LinkedList<>();
-
     public ListNode reverseList(ListNode head) {
-        if (head == null) {
-            return head;
+        ListNode prev = null;
+
+        while (head != null) {
+            ListNode tmp = head.next;
+            head.next = prev;
+            prev = head;
+            head = tmp;
         }
-        q.add(head.val);
-        ListNode prev = head;
-        reverseList(head.next);
-        head.val = q.poll();
-        return head;
+        return prev;
     }
 }
