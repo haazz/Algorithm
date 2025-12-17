@@ -1,26 +1,19 @@
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        List<int[]> answer = new ArrayList<>();
+        List<int[]> mergeIntervals = new ArrayList<>();
 
-
-        for (int i = 0; i < intervals.length; i++) {
-            if (intervals[i][0] >= newInterval[0] && intervals[i][0] <= newInterval[1]) {
-                newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
-            } else if (intervals[i][1] >= newInterval[0] && intervals[i][1] <= newInterval[1]) {
-                newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
-            } else if (intervals[i][0] <= newInterval[0] && intervals[i][1] >= newInterval[1]) {
-                newInterval = intervals[i];
+        for (int[] interval : intervals) {
+            if (newInterval[0] > interval[1]) {
+                mergeIntervals.add(interval);
+            } else if (newInterval[1] < interval[0]) {
+                mergeIntervals.add(newInterval);
+                newInterval = interval;
             } else {
-                answer.add(intervals[i]);
+                newInterval[0] = Math.min(newInterval[0], interval[0]);
+                newInterval[1] = Math.max(newInterval[1], interval[1]);
             }
         }
-        answer.add(newInterval);
-        Collections.sort(answer, (a, b) -> a[0] - b[0]);
-        int[][] ra = new int[answer.size()][2];
-
-        for (int i = 0; i < answer.size(); i++) {
-            ra[i] = answer.get(i);
-        }
-        return ra;
+        mergeIntervals.add(newInterval);
+        return mergeIntervals.toArray(new int[mergeIntervals.size()][]);
     }
 }
