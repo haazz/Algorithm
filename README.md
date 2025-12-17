@@ -14,6 +14,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/haazz/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
+| [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
@@ -29,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
+| [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
 | [0383-ransom-note](https://github.com/haazz/Algorithm/tree/master/0383-ransom-note) |
 | [0409-longest-palindrome](https://github.com/haazz/Algorithm/tree/master/0409-longest-palindrome) |
@@ -79,6 +81,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
+| [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
@@ -205,6 +208,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 ## Graph
 |  |
 | ------- |
@@ -220,6 +224,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0383-ransom-note](https://github.com/haazz/Algorithm/tree/master/0383-ransom-note) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 ## Doubly-Linked List
