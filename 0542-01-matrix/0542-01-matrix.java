@@ -24,7 +24,7 @@ class Solution {
                 int ny = dy[d] + elem[0];
                 int nx = dx[d] + elem[1];
 
-                if (ny < 0 || ny >= n || nx < 0 || nx >= m || mat[ny][nx] == 0 || mat[ny][nx] <= elem[2]) {
+                if (ny < 0 || ny >= n || nx < 0 || nx >= m || mat[ny][nx] == 0 || mat[ny][nx] <= elem[2] + 1) {
                     continue;
                 }
                 mat[ny][nx] = elem[2] + 1;
