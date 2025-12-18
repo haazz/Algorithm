@@ -19,6 +19,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
+| [0542-01-matrix](https://github.com/haazz/Algorithm/tree/master/0542-01-matrix) |
 | [0621-task-scheduler](https://github.com/haazz/Algorithm/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
@@ -74,6 +75,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0226-invert-binary-tree](https://github.com/haazz/Algorithm/tree/master/0226-invert-binary-tree) |
 | [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
+| [0542-01-matrix](https://github.com/haazz/Algorithm/tree/master/0542-01-matrix) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Union Find
@@ -107,6 +109,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0322-coin-change](https://github.com/haazz/Algorithm/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/haazz/Algorithm/tree/master/0416-partition-equal-subset-sum) |
+| [0542-01-matrix](https://github.com/haazz/Algorithm/tree/master/0542-01-matrix) |
 ## Trie
 |  |
 | ------- |
@@ -161,6 +164,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 | [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
+| [0542-01-matrix](https://github.com/haazz/Algorithm/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Binary Search Tree
 |  |
