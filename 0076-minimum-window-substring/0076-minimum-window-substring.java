@@ -2,10 +2,14 @@ class Solution {
     class Node {
         int idx;
         int val;
+        Node next;
+        Node prev;
 
-        public Node(int idx, int val) {
+        public Node(int idx, int val, Node prev) {
             this.idx = idx;
             this.val = val;
+            this.next = null;
+            this.prev = prev;
         }
     }
     public String minWindow(String s, String t) {
@@ -25,7 +29,10 @@ class Solution {
         }
 
         
-        Deque<Node> q = new LinkedList<>();
+        Node root = new Node(0, 0, null);
+        Node end = new Node(0, 0, root);
+        root.next = end;
+
         int minSize = Integer.MAX_VALUE;
         int qSize = 0;
         String answer = "";
@@ -39,24 +46,25 @@ class Solution {
             }
 
             if (hm.get(val).size() < alp[val]) {
-                Node nNode = new Node(i, val);
+                Node nNode = new Node(i, val, end.prev);
                 hm.get(val).add(nNode);
-                q.add(nNode);
+                end.prev.next = nNode;
+                end.prev = nNode;
                 qSize++;
             } else {
-                Node nNode = new Node(i, val);
+                Node nNode = new Node(i, val, end.prev);
                 Node pNode = hm.get(val).poll();
-                pNode.val = -1;
                 hm.get(val).add(nNode);
-                q.add(nNode);
+                end.prev.next = nNode;
+                end.prev = nNode;
+                pNode.next.prev = pNode.prev;
+                pNode.prev.next = pNode.next;
+                
             }
 
             if (qSize >= t.length()) {
-                while (!q.isEmpty() && q.peekFirst().val == -1) {
-                    q.poll();
-                }
-                int l = q.peekFirst().idx;
-                int r = q.peekLast().idx;
+                int l = root.next.idx;
+                int r = end.prev.idx;
 
                 if (r - l < minSize) {
                     answer = s.substring(l, r + 1);
