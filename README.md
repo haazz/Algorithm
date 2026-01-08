@@ -29,6 +29,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0076-minimum-window-substring](https://github.com/haazz/Algorithm/tree/master/0076-minimum-window-substring) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
@@ -48,6 +49,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
 | [0067-add-binary](https://github.com/haazz/Algorithm/tree/master/0067-add-binary) |
+| [0076-minimum-window-substring](https://github.com/haazz/Algorithm/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
@@ -213,6 +215,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Sliding Window
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/haazz/Algorithm/tree/master/0076-minimum-window-substring) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/haazz/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 ## Divide and Conquer
 |  |
