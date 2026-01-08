@@ -40,21 +40,23 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             int val = ch >= 'a' && ch <= 'z' ? ch - 'a' : ch - 'A' + 26;
+            Queue<Node> q = hm.get(val);
 
-            if (!hm.containsKey(val)) {
+            if (q == null) {
                 continue;
             }
+            
 
-            if (hm.get(val).size() < alp[val]) {
+            if (q.size() < alp[val]) {
                 Node nNode = new Node(i, val, end.prev);
-                hm.get(val).add(nNode);
+                q.add(nNode);
                 end.prev.next = nNode;
                 end.prev = nNode;
                 qSize++;
             } else {
                 Node nNode = new Node(i, val, end.prev);
-                Node pNode = hm.get(val).poll();
-                hm.get(val).add(nNode);
+                Node pNode = q.poll();
+                q.add(nNode);
                 end.prev.next = nNode;
                 end.prev = nNode;
                 pNode.next.prev = pNode.prev;
