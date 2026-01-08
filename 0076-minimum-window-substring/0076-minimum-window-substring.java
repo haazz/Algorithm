@@ -34,8 +34,8 @@ class Solution {
         root.next = end;
 
         int minSize = Integer.MAX_VALUE;
+        int minStartIdx = 0;
         int qSize = 0;
-        String answer = "";
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
@@ -67,11 +67,11 @@ class Solution {
                 int r = end.prev.idx;
 
                 if (r - l < minSize) {
-                    answer = s.substring(l, r + 1);
+                    minStartIdx = l;
                     minSize = r - l;
                 }
             }
         }
-        return answer;
+        return minSize == Integer.MAX_VALUE ? "" : s.substring(minStartIdx, minStartIdx + minSize + 1);
     }
 }
