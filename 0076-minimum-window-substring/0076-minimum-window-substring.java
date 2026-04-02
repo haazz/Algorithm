@@ -25,7 +25,6 @@ class Solution {
                     mLen = ri - li;
                     mli = li;
                     mri = ri;
-                    System.out.println("update" + li + " " + ri);
                 }
                 
                 // minus proccess
@@ -37,7 +36,6 @@ class Solution {
                         mLen = ri - li;
                         mli = li;
                         mri = ri;
-                        System.out.println("updatew" + li + " " + ri);
                     }
 
                 }
