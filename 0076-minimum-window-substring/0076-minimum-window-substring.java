@@ -16,7 +16,6 @@ class Solution {
 
         for (int ri = 0; ri < s.length(); ri++) {
             char ch = s.charAt(ri);
-            System.out.println(li + " " + ri);
             if (hm.containsKey(ch)) {
                 // general proccess
                 hm.put(ch, hm.get(ch) - 1);
