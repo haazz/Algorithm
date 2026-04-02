@@ -1,7 +1,6 @@
 class Solution {
     public String minWindow(String s, String t) {
         HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
-        Queue<Integer> q = new LinkedList<>();
         
         for (int i  = 0; i < t.length(); i++) {
             char ch = t.charAt(i);
@@ -19,7 +18,6 @@ class Solution {
             if (hm.containsKey(ch)) {
                 // general proccess
                 hm.put(ch, hm.get(ch) - 1);
-                q.add(ri);
                 if (hm.get(ch) >= 0 && ++cnt >= t.length() && mLen > ri - li) {
                     mLen = ri - li;
                     mli = li;
@@ -27,20 +25,20 @@ class Solution {
                 }
                 
                 // minus proccess
-                while (hm.get(s.charAt(q.peek())) < 0) {
-                    char lch = s.charAt(q.poll());
-                    hm.put(lch, hm.get(lch) + 1);
-                    li = q.peek();
-                    if (cnt >= t.length() && mLen > ri - li) {
-                        mLen = ri - li;
-                        mli = li;
-                        mri = ri;
+                char lch = s.charAt(li);
+                while (!hm.containsKey(lch) || hm.get(lch) < 0) {
+                    if (hm.containsKey(lch)) {
+                        hm.put(lch, hm.get(lch) + 1);
                     }
-
+                    li++;
+                    lch = s.charAt(li);
                 }
-            }
-            if (q.isEmpty()) {
-                li++;
+                if (cnt >= t.length() && mLen > ri - li) {
+                    mLen = ri - li;
+                    mli = li;
+                    mri = ri;
+                }
+                
             }
         }
         if (cnt < t.length()) {
