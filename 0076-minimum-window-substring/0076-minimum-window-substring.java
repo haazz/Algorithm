@@ -1,14 +1,14 @@
 class Solution {
     public String minWindow(String s, String t) {
-        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
-        HashMap<Character, Integer> win = new HashMap<Character, Integer>();
+        int[] hm = new int[128];
+        int[] win = new int[128];
         
         for (int i  = 0; i < t.length(); i++) {
             char ch = t.charAt(i);
-            hm.put(ch, hm.getOrDefault(ch, 0) + 1);
+            hm[ch]++;
         }
         
-        int target = hm.size();
+        int target = t.length();
         int cnt = 0;
         int li = 0;
         int rli = 0;
@@ -17,11 +17,10 @@ class Solution {
         for (int ri = 0; ri < s.length(); ri++) {
             char ch = s.charAt(ri);
 
-            win.put(ch, win.getOrDefault(ch, 0) + 1);
+            win[ch]++;
 
-            if (hm.containsKey(ch) && hm.get(ch).equals(win.get(ch))) {
-                cnt++;
-
+            if (hm[ch] != 0 && hm[ch] == win[ch]) {
+                cnt += win[ch];
             }
 
             while (cnt == target) {
@@ -32,11 +31,10 @@ class Solution {
                 }
 
                 char lch = s.charAt(li);
-                
-                win.put(lch, win.get(lch) - 1);
+                win[lch]--;
 
-                if (hm.containsKey(lch) && hm.get(lch) > win.get(lch)) {    
-                    cnt--;
+                if (hm[lch] != 0 && hm[lch] > win[lch]) {    
+                    cnt -= (win[lch] + 1);
                 }
                 li++;
             }
