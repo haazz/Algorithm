@@ -1,43 +1,54 @@
 class Solution {
     public String minWindow(String s, String t) {
-        int[] alp = new int[52];
-
-        for (int i = 0; i < t.length(); i++) {
-            int val;
-            if (t.charAt(i) >= 'a' && t.charAt(i) <= 'z') {
-                val = t.charAt(i) - 'a';
-                alp[val]++;
-            } else {
-                val = t.charAt(i) - 'A' + 26;
-                alp[val]++;
-            }
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        Queue<Integer> q = new LinkedList<>();
+        
+        for (int i  = 0; i < t.length(); i++) {
+            char ch = t.charAt(i);
+            hm.put(ch, hm.getOrDefault(ch, 0) + 1);
         }
+        
+        int cnt = 0;
+        int mLen = Integer.MAX_VALUE;
+        int mli = 0;
+        int mri = 0;
+        int li = 0;
 
-        int cnt = t.length();
-        int msi = 0;
-        int start = 0;
-        int minSize = Integer.MAX_VALUE;
-
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            int val = ch >= 'a' && ch <= 'z' ? ch - 'a' : ch - 'A' + 26;
-
-            if (--alp[val] >= 0) {
-                cnt--;
-            }
-
-            while (cnt <= 0) {
-                int sVal = s.charAt(start) >= 'a' && s.charAt(start) <= 'z' ? s.charAt(start) - 'a' : s.charAt(start) - 'A' + 26;
-                if (++alp[sVal] > 0) {
-                    cnt++;
-                    if (minSize > i - start) {
-                        msi = start;
-                        minSize = i - start;
-                    }
+        for (int ri = 0; ri < s.length(); ri++) {
+            char ch = s.charAt(ri);
+            System.out.println(li + " " + ri);
+            if (hm.containsKey(ch)) {
+                // general proccess
+                hm.put(ch, hm.get(ch) - 1);
+                q.add(ri);
+                if (hm.get(ch) >= 0 && ++cnt >= t.length() && mLen > ri - li) {
+                    mLen = ri - li;
+                    mli = li;
+                    mri = ri;
+                    System.out.println("update" + li + " " + ri);
                 }
-                start++;
+                
+                // minus proccess
+                while (hm.get(s.charAt(q.peek())) < 0) {
+                    char lch = s.charAt(q.poll());
+                    hm.put(lch, hm.get(lch) + 1);
+                    li = q.peek();
+                    if (cnt >= t.length() && mLen > ri - li) {
+                        mLen = ri - li;
+                        mli = li;
+                        mri = ri;
+                        System.out.println("updatew" + li + " " + ri);
+                    }
+
+                }
+            }
+            if (q.isEmpty()) {
+                li++;
             }
         }
-        return minSize == Integer.MAX_VALUE ? "" : s.substring(msi, msi + minSize + 1);
+        if (cnt < t.length()) {
+            return  "";
+        }
+        return s.substring(mli, mri + 1);
     }
 }
