@@ -11,17 +11,19 @@
  * @return {number}
  */
 
+var res;
+
 var dfs = (node) => {
     if (node === null) {
-        return [0, 0];
+        return 0;
     }
-    const [lv, lh] = dfs(node.left);
-    const [rv, rh] = dfs(node.right);
-    const h = Math.max(lh, rh) + 1;
-    const v = lh + rh;
-    return [Math.max(lv, rv, v), h];
+    const l = dfs(node.left);
+    const r = dfs(node.right);
+    res = Math.max(l + r, res);
+    return Math.max(l, r) + 1;
 }
 var diameterOfBinaryTree = function(root) {
-    const [v, h] = dfs(root);
-    return v;
+    res = 0;
+    dfs(root);
+    return res;
 };
