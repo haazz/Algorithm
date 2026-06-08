@@ -11,6 +11,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/haazz/Algorithm/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
+| [0056-merge-intervals](https://github.com/haazz/Algorithm/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/haazz/Algorithm/tree/master/0057-insert-interval) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
@@ -97,6 +98,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/haazz/Algorithm/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
