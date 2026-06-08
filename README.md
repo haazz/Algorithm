@@ -104,6 +104,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0125-valid-palindrome](https://github.com/haazz/Algorithm/tree/master/0125-valid-palindrome) |
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
+| [0876-middle-of-the-linked-list](https://github.com/haazz/Algorithm/tree/master/0876-middle-of-the-linked-list) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -137,6 +138,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0141-linked-list-cycle](https://github.com/haazz/Algorithm/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/haazz/Algorithm/tree/master/0146-lru-cache) |
 | [0206-reverse-linked-list](https://github.com/haazz/Algorithm/tree/master/0206-reverse-linked-list) |
+| [0876-middle-of-the-linked-list](https://github.com/haazz/Algorithm/tree/master/0876-middle-of-the-linked-list) |
 ## Recursion
 |  |
 | ------- |
