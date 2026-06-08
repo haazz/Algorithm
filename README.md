@@ -8,6 +8,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
 | [0011-container-with-most-water](https://github.com/haazz/Algorithm/tree/master/0011-container-with-most-water) |
+| [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/haazz/Algorithm/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/haazz/Algorithm/tree/master/0054-spiral-matrix) |
 | [0057-insert-interval](https://github.com/haazz/Algorithm/tree/master/0057-insert-interval) |
@@ -30,6 +31,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0001-two-sum](https://github.com/haazz/Algorithm/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/haazz/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/haazz/Algorithm/tree/master/0076-minimum-window-substring) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/haazz/Algorithm/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0139-word-break](https://github.com/haazz/Algorithm/tree/master/0139-word-break) |
@@ -50,6 +52,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0008-string-to-integer-atoi](https://github.com/haazz/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/haazz/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/haazz/Algorithm/tree/master/0020-valid-parentheses) |
+| [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
 | [0067-add-binary](https://github.com/haazz/Algorithm/tree/master/0067-add-binary) |
 | [0076-minimum-window-substring](https://github.com/haazz/Algorithm/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/haazz/Algorithm/tree/master/0079-word-search) |
@@ -93,6 +96,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Sorting
 |  |
 | ------- |
+| [0049-group-anagrams](https://github.com/haazz/Algorithm/tree/master/0049-group-anagrams) |
 | [0075-sort-colors](https://github.com/haazz/Algorithm/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/haazz/Algorithm/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/haazz/Algorithm/tree/master/0242-valid-anagram) |
