@@ -70,6 +70,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/haazz/Algorithm/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0310-minimum-height-trees](https://github.com/haazz/Algorithm/tree/master/0310-minimum-height-trees) |
+| [0543-diameter-of-binary-tree](https://github.com/haazz/Algorithm/tree/master/0543-diameter-of-binary-tree) |
 | [0721-accounts-merge](https://github.com/haazz/Algorithm/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/haazz/Algorithm/tree/master/0733-flood-fill) |
 ## Breadth-First Search
@@ -151,6 +152,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/haazz/Algorithm/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0543-diameter-of-binary-tree](https://github.com/haazz/Algorithm/tree/master/0543-diameter-of-binary-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -161,6 +163,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0230-kth-smallest-element-in-a-bst](https://github.com/haazz/Algorithm/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/haazz/Algorithm/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/haazz/Algorithm/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0543-diameter-of-binary-tree](https://github.com/haazz/Algorithm/tree/master/0543-diameter-of-binary-tree) |
 ## Binary Search
 |  |
 | ------- |
