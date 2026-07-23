@@ -17,14 +17,9 @@ class Solution {
 
     public int comp(String a, String b) {
         
-        for (int i = 0; i < a.length(); i++) {
-            for (int j = 0; a.length() > i + j; j++) {
-                if (a.charAt(i + j) != b.charAt(j)) {
-                    break;
-                }
-                if (i + j == a.length() - 1) {
-                    return j + 1;
-                }
+        for (int i = 1; i < a.length(); i++) {
+            if (b.startsWith(a.substring(i))) {
+                return a.length() - i;
             }
         }
         return 0;
