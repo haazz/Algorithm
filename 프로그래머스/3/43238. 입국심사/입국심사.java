@@ -3,10 +3,10 @@ import java.util.*;
 class Solution {
     public long solution(int n, int[] times) {
         Arrays.sort(times);
-        
         long l = 0;
         long r = Long.MAX_VALUE;
-        long answer = r;
+        long res = 0;
+        
         
         while (l <= r) {
             long mid = (l + r) / 2;
@@ -19,13 +19,15 @@ class Solution {
                 }
             }
             
+            // System.out.println(cnt + " " + mid);
+            
             if (cnt >= n) {
+                res = mid;
                 r = mid - 1;
-                answer = mid;
             } else {
                 l = mid + 1;
             }
         }
-        return answer;
+        return res;
     }
 }
