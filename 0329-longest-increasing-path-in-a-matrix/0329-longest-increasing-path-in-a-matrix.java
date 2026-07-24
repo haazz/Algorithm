@@ -4,6 +4,7 @@ class Solution {
     int[][] dp;
     int[] dy = {0, 1, 0, -1};
     int[] dx = {1, 0, -1, 0};
+    int res = 1;
 
     public void bfs(int[][] matrix, int sy, int sx) {
         Queue<int[]> q = new LinkedList<>();
@@ -23,6 +24,7 @@ class Solution {
                     continue;
                 }
                 dp[ny][nx] = elem[2] + 1;
+                res = Math.max(res, dp[ny][nx]);
                 q.add(new int[] {ny, nx, elem[2] + 1});
             }
         }
@@ -50,13 +52,6 @@ class Solution {
         //     }
         //     bfs(matrix, elem[0], elem[1]);
         // }
-
-        int res = 0;
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                res = Math.max(res, dp[i][j]);
-            }
-        }
 
         return res;
     }
