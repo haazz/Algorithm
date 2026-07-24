@@ -36,36 +36,27 @@ class Solution {
         dp = new int[N][M];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                pq.add(new int[] {i, j, matrix[i][j]});
+                if (dp[i][j] >= 1) {
+                    continue;
+                }
+                bfs(matrix, i, j);
             }
         }
 
-        while (!pq.isEmpty()) {
-            int[] elem = pq.poll();
-            if (dp[elem[0]][elem[1]] >= 1) {
-                continue;
-            }
-            bfs(matrix, elem[0], elem[1]);
-        //     System.out.println(matrix[elem[0]][elem[1]]);
-        //     for (int i = 0; i < N; i++) {
-        //     for (int j = 0; j < M; j++) {
-        //         System.out.print(dp[i][j] + " ");
+        // while (!pq.isEmpty()) {
+        //     int[] elem = pq.poll();
+        //     if (dp[elem[0]][elem[1]] >= 1) {
+        //         continue;
         //     }
-        //     System.out.println("");
+        //     bfs(matrix, elem[0], elem[1]);
         // }
-        // System.out.println("");
-
-        }
 
         int res = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                // System.out.print(dp[i][j] + " ");
                 res = Math.max(res, dp[i][j]);
             }
-            // System.out.println("");
         }
-        // System.out.println("");
 
         return res;
     }
